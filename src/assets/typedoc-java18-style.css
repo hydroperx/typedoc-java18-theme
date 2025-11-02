@@ -1,20 +1,82 @@
 /*
+ * Define fonts
+ */
+
+/* DejaVu Serif fonts are copyright (c) Bitstream. See
+   the fonts/dejavu-serif/DejaVu Fonts License.txt file. */
+@font-face {
+    font-family: "DejaVu Serif";
+    font-weight: 400;
+    src: url(./fonts/dejavu-serif/DejaVuSerif.ttf) format("truetype"),
+        url(./fonts/dejavu-serif/DejaVuSerif.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Serif";
+    font-weight: 400;
+	font-style: italic;
+    src: url(./fonts/dejavu-serif/DejaVuSerif-Italic.ttf) format("truetype"),
+        url(./fonts/dejavu-serif/DejaVuSerif-Italic.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Serif";
+    font-weight: 700;
+    src: url(./fonts/dejavu-serif/DejaVuSerif-Bold.ttf) format("truetype"),
+        url(./fonts/dejavu-serif/DejaVuSerif-Bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Serif";
+    font-weight: 700;
+	font-style: italic;
+    src: url(./fonts/dejavu-serif/DejaVuSerif-BoldItalic.ttf) format("truetype"),
+        url(./fonts/dejavu-serif/DejaVuSerif-BoldItalic.woff2) format("woff2");
+}
+
+/* DejaVu Sans Mono fonts are copyright (c) Bitstream. See
+   the fonts/dejavu-sans-mono/DejaVu Fonts License.txt file. */
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    font-weight: 400;
+    src: url(./fonts/dejavu-sans-mono/DejaVuSansMono.ttf) format("truetype"),
+        url(./fonts/dejavu-sans-mono/DejaVuSansMono.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    font-weight: 400;
+	font-style: italic;
+    src: url(./fonts/dejavu-sans-mono/DejaVuSansMono-Oblique.ttf) format("truetype"),
+        url(./fonts/dejavu-sans-mono/DejaVuSansMono-Oblique.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    font-weight: 700;
+    src: url(./fonts/dejavu-sans-mono/DejaVuSansMono-Bold.ttf) format("truetype"),
+        url(./fonts/dejavu-sans-mono/DejaVuSansMono-Bold.woff2) format("woff2");
+}
+@font-face {
+    font-family: "DejaVu Sans Mono";
+    font-weight: 700;
+	font-style: italic;
+    src: url(./fonts/dejavu-sans-mono/DejaVuSansMono-BoldOblique.ttf) format("truetype"),
+        url(./fonts/dejavu-sans-mono/DejaVuSansMono-BoldOblique.woff2) format("woff2");
+}
+
+/*
  * Define colors
  */
 
 :root {
-	/* GitHub "Light default" */
+	/* Java 18 "Light default" */
 	--light-color-background: #ffffff;
 	--light-color-background-secondary: #f6f8fa;
 	--light-color-background-navbar: #f6f8fa;
 	--light-color-background-overlay: #c8d1da66;
 
-	--light-color-accent: #d1d9e0;
+	--light-color-accent: #dee3e9;
 
-	--light-color-text: #1f2328;
+	--light-color-text: #474747;
 	--light-color-text-aside: #59636e;
 
-	--light-color-link: #0969da;
+	--light-color-link: #4A6782;
 
 	--light-color-warning-border: #f7ebba;
 	--light-color-background-warning: #fff8c5;
@@ -25,18 +87,18 @@
 	--light-color-alert-warning: #9a6700;
 	--light-color-alert-caution: #cf222e;
 
-	/* GitHub "Dark default" */
-	--dark-color-background: #0d1117;
-	--dark-color-background-secondary: #151b23;
-	--dark-color-background-navbar: #010409;
-	--dark-color-background-overlay: #21283066;
+	/* Java 18 "Dark default" */
+	--dark-color-background: #fff;
+	--dark-color-background-secondary: #f6f8fa;
+	--dark-color-background-navbar: #f6f8fa;
+	--dark-color-background-overlay: #c8d1da66;
 
-	--dark-color-accent: #383e48;
+	--dark-color-accent: #dee3e9;
 
-	--dark-color-text: #f0f6fc;
-	--dark-color-text-aside: #9198a1;
+	--dark-color-text: #474747;
+	--dark-color-text-aside: #59636e;
 
-	--dark-color-link: #4493f8;
+	--dark-color-link: #4A6782;
 
 	--dark-color-warning-border: #3a2d12;
 	--dark-color-background-warning: #282215;
@@ -87,9 +149,8 @@
  */
 
 :root {
-	--font-family-text:
-		-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
-	--font-family-code: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
+	--font-family-text: 'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+	--font-family-code: 'DejaVu Sans Mono', monospace;
 }
 
 body {

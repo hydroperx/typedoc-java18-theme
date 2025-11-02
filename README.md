@@ -1,33 +1,29 @@
-# Theme your TypeDoc like GitHub
+# TypeDoc Java 18 Theme
 
-[![NPM](https://nodei.co/npm/typedoc-github-theme.png)](https://npmjs.org/package/typedoc-github-theme)
+This [TypeDoc](https://github.com/TypeStrong/typedoc) theme uses a design close to JavaDoc theme seen in the Java SE 18 API documentation.
 
-This [TypeDoc](https://github.com/TypeStrong/typedoc) theme is designed to provide an elegant and seamless look and feel for your TypeScript documentation on GitHub Pages, inspired by the GitHub design.
-
-## Example
-
-[![Example](./example.png)](https://julianwowra.github.io/typedoc-github-theme/)
+> **Note**: This is a work-in-progress. It is not done, yet.
 
 ## Usage
 
 **Install the package with your favourite package manager:**
 
 ```text
-npm install typedoc-github-theme --save-dev
+npm install @hydroperx/typedoc-java18-theme --save-dev
 ```
 
 ```text
-pnpm add typedoc-github-theme --save-dev
+pnpm add @hydroperx/typedoc-java18-theme --save-dev
 ```
 
 ```text
-yarn add typedoc-github-theme --dev
+yarn add @hydroperx/typedoc-java18-theme --dev
 ```
 
 **Use the theme when generating your documentation:**
 
 ```text
-npx typedoc src --plugin typedoc-github-theme
+npx typedoc src --plugin @hydroperx/typedoc-java18-theme
 ```
 
 > [!NOTE]
@@ -36,12 +32,6 @@ npx typedoc src --plugin typedoc-github-theme
 
 ---
 
-## Author
+## Authors
 
-👤 **Julian Wowra <development@julianwowra.de>**
-
-- Github: [@JulianWowra](https://github.com/JulianWowra)
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome!<br />Feel free to check the [issues page](https://github.com/JulianWowra/typedoc-github-theme/issues). You can also take a look at the [contributing guide](https://github.com/JulianWowra/typedoc-github-theme/blob/main/CONTRIBUTING.md).
+This project started by using [Julian Wowra @JulianWowra's `typedoc-github-theme`](https://github.com/JulianWowra/typedoc-github-theme) as a template, however it is significantly different, so most of `@hydroperx/typedoc-java18-theme` is done by [Matheus Dias de Souza @hydroperx](https://github.com/hydroperx/typedoc-java18-theme).

@@ -1,7 +1,7 @@
 import { JSX } from 'typedoc';
-import type { GitHubThemeContext } from '../GitHubThemeContext.js';
+import type { Java18ThemeContext } from '../Java18ThemeContext.js';
 
-export function footer(context: GitHubThemeContext) {
+export function footer(context: Java18ThemeContext) {
 	return (
 		<footer>
 			{context.hook('footer.begin', context)}
@@ -12,7 +12,7 @@ export function footer(context: GitHubThemeContext) {
 	);
 }
 
-function generatorDisplay(context: GitHubThemeContext) {
+function generatorDisplay(context: Java18ThemeContext) {
 	if (context.options.getValue('hideGenerator')) {
 		return <></>;
 	}
@@ -24,14 +24,14 @@ function generatorDisplay(context: GitHubThemeContext) {
 				TypeDoc
 			</a>
 			{' with '}
-			<a href="https://github.com/JulianWowra/typedoc-github-theme" target="_blank">
-				typedoc-github-theme
+			<a href="https://github.com/hydroperx/typedoc-java18-theme" target="_blank">
+				typedoc-java18-theme
 			</a>
 		</p>
 	);
 }
 
-function customFooterDisplay(context: GitHubThemeContext) {
+function customFooterDisplay(context: Java18ThemeContext) {
 	const customFooterHtml = context.options.getValue('customFooterHtml');
 
 	if (!customFooterHtml) {

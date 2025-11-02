@@ -1,10 +1,10 @@
 # Node modules
-.pnpm-store
-node_modules
+/package-lock.json
+/node_modules
 
 # Logs
 *.log*
 
 # Other
-docs
-dist
+/docs
+/dist

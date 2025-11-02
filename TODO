@@ -1,0 +1,53 @@
+Inspiration: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/module-summary.html
+
+- [x] Rename project to TypeDoc Java 18 Theme
+
+# How to
+
+- [Document: Custom Themes](https://typedoc.org/documents/Development.Custom_Themes.html)
+- [How to customize a TypeDoc theme](https://how.dev/answers/how-to-customize-a-typedoc-theme)
+- [DefaultTheme](https://github.com/TypeStrong/typedoc/tree/master/src/lib/output/themes/default)
+
+# Base CSS
+
+- [ ] Fonts
+- [ ] Anchors
+- [ ] Code (code blocks, inline code)
+- [ ] Lists (ul)
+- [ ] Checkboxes
+- [ ] Text input
+- [ ] Tables
+- [ ] Do not forget `overflow-wrap: anywhere;` in some places
+
+# Portrait/mobile responsiveness
+
+- [ ] Done
+
+# Icons
+
+- [ ] Search
+
+# Index
+
+- [ ] Content
+- [ ] Modules section
+
+# Module index
+
+- [ ] Description (based on entry point)
+- [ ] Place item sections
+
+# Namespace index
+
+- [ ] Place item sections
+
+# Item sections
+
+- [ ] Namespaces section
+  - [ ] Spread them recursively into the list (omitting the parent if it's empty); e.g.:
+    - Namespace1
+    - Namespace1.Namespace2
+- [ ] Classes section
+- [ ] Interfaces section
+- [ ] Types section
+- [ ] Functions section

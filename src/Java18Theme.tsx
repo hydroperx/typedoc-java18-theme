@@ -3,9 +3,9 @@ import { dirname, resolve } from 'path';
 import type { PageEvent, Reflection, Renderer } from 'typedoc';
 import { DefaultTheme, JSX, RendererEvent } from 'typedoc';
 import { fileURLToPath } from 'url';
-import { GitHubThemeContext } from './GitHubThemeContext.js';
+import { Java18ThemeContext } from './Java18ThemeContext.js';
 
-export class GitHubTheme extends DefaultTheme {
+export class Java18Theme extends DefaultTheme {
 	constructor(renderer: Renderer) {
 		super(renderer);
 
@@ -20,23 +20,23 @@ export class GitHubTheme extends DefaultTheme {
 		// link the css file
 		renderer.hooks.on('head.end', (event) => (
 			<>
-				<link rel="stylesheet" href={event.relativeURL('assets/typedoc-github-style.css')} />
+				<link rel="stylesheet" href={event.relativeURL('assets/typedoc-java18-style.css')} />
 			</>
 		));
 
 		// set the Shiki theme
 		renderer.application.on('bootstrapEnd', () => {
 			if (!this.application.options.isSet('lightHighlightTheme')) {
-				this.application.options.setValue('lightHighlightTheme', 'github-light-default');
+				this.application.options.setValue('lightHighlightTheme', 'java18-light-default');
 			}
 
 			if (!this.application.options.isSet('darkHighlightTheme')) {
-				this.application.options.setValue('darkHighlightTheme', 'github-dark-default');
+				this.application.options.setValue('darkHighlightTheme', 'java18-dark-default');
 			}
 		});
 	}
 
 	getRenderContext(pageEvent: PageEvent<Reflection>) {
-		return new GitHubThemeContext(this.router, this, pageEvent, this.application.options);
+		return new Java18ThemeContext(this.router, this, pageEvent, this.application.options);
 	}
 }

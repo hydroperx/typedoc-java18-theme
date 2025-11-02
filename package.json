@@ -1,18 +1,16 @@
 {
-	"name": "typedoc-github-theme",
-	"description": "Elegant and seamless look and feel for your TypeScript documentation on GitHub Pages",
-	"version": "0.3.1",
+	"name": "@hydroperx/typedoc-java18-theme",
+	"description": "TypeDoc Java SE 18 Theme",
+	"version": "0.1.0",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
 	"type": "module",
-	"repository": "https://github.com/JulianWowra/typedoc-github-theme",
-	"homepage": "https://julianwowra.github.io/typedoc-github-theme/",
-	"author": "Julian Wowra <development@julianwowra.de>",
+	"repository": "https://github.com/hydroperx/typedoc-java18-theme",
+	"author": "Matheus Dias de Souza <hydroperfox@gmail.com>",
 	"license": "MIT",
 	"publishConfig": {
-		"provenance": true
+		"access": "public"
 	},
-	"packageManager": "pnpm@10.15.0",
 	"peerDependencies": {
 		"typedoc": "~0.28.0"
 	},
@@ -27,10 +25,12 @@
 		"typescript-eslint": "8.40.0"
 	},
 	"scripts": {
-		"build": "pnpm build:lib && pnpm build:docs",
+		"prepublishOnly": "npm run build:lib",
+		"watch": "tsc --watch",
+		"build": "npm run build:lib",
 		"build:lib": "tsc",
 		"build:docs": "typedoc src --plugin ./dist/index.js",
-		"lint": "pnpm lint:format && pnpm lint:code",
+		"lint": "npm run lint:format && npm run lint:code",
 		"lint:code": "eslint .",
 		"lint:format": "prettier --check ."
 	},
@@ -39,6 +39,6 @@
 	},
 	"keywords": [
 		"typedoc-theme",
-		"typedoc-github-theme"
+		"typedoc-javadoc-theme"
 	]
 }
