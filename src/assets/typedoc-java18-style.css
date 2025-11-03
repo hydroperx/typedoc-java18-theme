@@ -309,7 +309,6 @@ pre {
 	border: none;
 	border-radius: 6px;
 	margin: 1em 0;
-	background-color: var(--color-background-secondary);
 	color: var(--color-text);
 	font-family: var(--font-family-code);
 }

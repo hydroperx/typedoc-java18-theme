@@ -10,8 +10,8 @@ Inspiration: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/module
 
 # Base CSS
 
-- [ ] Fonts
-- [ ] Anchors
+- [x] Fonts
+- [x] Anchors/links
 - [ ] Code (code blocks, inline code)
 - [ ] Lists (ul)
 - [ ] Checkboxes
@@ -26,6 +26,10 @@ Inspiration: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/module
 # Icons
 
 - [ ] Search
+
+# Sidebar
+
+- [ ] Inside, say, a namespace, class, interface or enum, the sidebar should arrange same module's items (classes (inc. itrfc, type, enum), variables, functions and namespaces).
 
 # Index
 
@@ -49,5 +53,7 @@ Inspiration: https://docs.oracle.com/en/java/javase/18/docs/api/java.base/module
     - Namespace1.Namespace2
 - [ ] Classes section
 - [ ] Interfaces section
+- [ ] Enums section
 - [ ] Types section
+- [ ] Variables section
 - [ ] Functions section

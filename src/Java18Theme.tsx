@@ -1,7 +1,20 @@
 import { cpSync } from 'fs';
 import { dirname, resolve } from 'path';
-import type { PageEvent, Reflection, Renderer } from 'typedoc';
-import { DefaultTheme, JSX, RendererEvent } from 'typedoc';
+import type {
+	ContainerReflection,
+	DocumentReflection,
+	PageEvent,
+	ProjectReflection,
+	Reflection,
+	Renderer
+} from 'typedoc';
+import {
+	DefaultTheme,
+	JSX,
+	PageKind,
+	RenderTemplate,
+	RendererEvent
+} from 'typedoc';
 import { fileURLToPath } from 'url';
 import { Java18ThemeContext } from './Java18ThemeContext.js';
 
@@ -39,4 +52,28 @@ export class Java18Theme extends DefaultTheme {
 	getRenderContext(pageEvent: PageEvent<Reflection>) {
 		return new Java18ThemeContext(this.router, this, pageEvent, this.application.options);
 	}
+
+	render(page: PageEvent): string {
+        const templateMapping: Record<string, (_: PageEvent<never>) => JSX.Element> = {
+            [PageKind.Index]: this.indexTemplate,
+            [PageKind.Document]: this.documentTemplate,
+            [PageKind.Hierarchy]: this.hierarchyTemplate,
+            [PageKind.Reflection]: this.reflectionTemplate,
+        };
+
+        const template = templateMapping[page.pageKind];
+
+        if (!template) {
+            throw new Error(`TypeDoc's DefaultTheme does not support the page kind ${page.pageKind}`);
+        }
+
+        if (!page.isReflectionEvent()) {
+            throw new Error(
+                `TypeDoc's DefaultTheme requires that a page model be a reflection when rendering ${page.pageKind}`,
+            );
+        }
+
+        const templateOutput = this.defaultLayoutTemplate(page, template as RenderTemplate<PageEvent<Reflection>>);
+        return "<!DOCTYPE html>" + JSX.renderElement(templateOutput) + "\n";
+    }
 }
