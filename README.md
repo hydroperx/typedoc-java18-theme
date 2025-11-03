@@ -35,3 +35,5 @@ npx typedoc src --plugin @hydroperx/typedoc-java18-theme
 ## Authors
 
 This project started by using [Julian Wowra @JulianWowra's `typedoc-github-theme`](https://github.com/JulianWowra/typedoc-github-theme) as a template, however it is significantly different, so most of `@hydroperx/typedoc-java18-theme` is done by [Matheus Dias de Souza @hydroperx](https://github.com/hydroperx/typedoc-java18-theme).
+
+Also credits to TypeDoc for some of the default theme code.
